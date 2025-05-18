@@ -12,7 +12,7 @@
 	 LDRH R3,[R0]
 	 SUB R2,R2,#1
 	 CMP R5,R3
-	 BHI LOOP (Forsmallest—BLS)
+	 BHI LOOP 
 	 MOV R5,R3
 	 B LOOP
  DONE  STR R5,[R4]
