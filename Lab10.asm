@@ -1,13 +1,13 @@
-   area demo,code,readonly
-start
-;disabling
-   mrs r0, cpsr ;11010011=D3
-   BIC r0, r0, #0x80 ;01010011=53
-   msr cpsr_c, r0;
-;enabling
-   mrs r0, cpsr ;
-   ORRr0, r0, #0x80
-   msr cpsr_c, r0;
-;stopping
-   bx lr
-   End
+	AREA PRG1,CODE,READONLY
+START
+;DISABLING
+	MRS R0,CPSR;11010011=D3
+	BIC R0,R0,#0X80;01010011=53
+	MSR CPSR_C,R0;
+;ENABLING
+	MRS R0,CPSR;
+	ORR R0,R0,#0X80
+	MSR CPSR_C,R0;
+;STOPPING
+	BX LR
+	END
